@@ -25,7 +25,7 @@ describe Show do
   describe "#network" do
     it "returns the network that the show belongs to" do
       show = Show.create(name: "Community", day: "Thursday", season: "Winter", genre: "Comedy")
-      network = show.build_network(call_letters: "NBC")
+      network = show.build_network(call_letters: "NBC", id: 1)
       expect(show.network).to eq(network)
     end
   end
